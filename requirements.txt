@@ -1,5 +1,5 @@
-Flask==2.1.4
-tensorflow==2.7.0
-numpy==1.19.5
-transformers==4.12.2
+flask
+tensorflow
+numpy
+transformers
 gunicorn
