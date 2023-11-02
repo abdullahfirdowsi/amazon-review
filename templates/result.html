@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
+    <title>Amazon Product Rating</title>
+    <style>
+        body {
+            background-image: url("https://wallpapers.com/images/high/amazon-pictures-dd9ug2iyb61std06.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #ffffff; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Result</h1>
-    <p>Review: {{ review }}</p>
-    <p>Category: {{ category }}</p>
+    <h1>Amazon Product Rating</h1>
+    <p>The product is {{ result }}</p>
 </body>
 </html>
