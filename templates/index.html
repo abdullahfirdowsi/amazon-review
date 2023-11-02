@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Review Sentiment Analysis</title>
+    <title>Amazon Product Rating</title>
+    <style>
+        body {
+            background-image: url("https://wallpapers.com/images/high/amazon-pictures-dd9ug2iyb61std06.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #ffffff; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 500px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff9900; /* Set button background color to orange */
+            color: #ffffff; /* Set button text color to white */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #ff6600; /* Set button background color to darker orange on hover */
+        }
+    </style>
 </head>
 <body>
-    <h1>Review Sentiment Analysis</h1>
-    <form action="/predict" method="post">
-        <label for="review">Enter your review:</label><br>
-        <textarea id="review" name="review" rows="4" cols="50" placeholder="Enter your review"></textarea><br>
-        <input type="submit" value="Submit">
+    <h1>Amazon Product Rating</h1>
+    <form method="POST" action="/">
+        <input type="text" name="url" placeholder="Enter Amazon product URL: " required>
+        <input type="text" name="asin" placeholder="Enter product ID (ASIN): " pattern="[A-Z0-9]{10}" required>
+        <p>Model will analyze the link and give results whether the product is 'good' or 'bad'</p>
+        <button type="submit">Check Rating</button>
     </form>
 </body>
 </html>
