@@ -1,5 +1,5 @@
 flask
-tensorflow
 numpy
+tensorflow
 transformers
 gunicorn
