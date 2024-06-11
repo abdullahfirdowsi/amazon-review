@@ -13,8 +13,11 @@ model = load_model('model.h5')
 with open('tokenizer.json', 'r') as f:
     tokenizer = tokenizer_from_json(f.read())
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        url = request.form['url']
+        return render_template('result.html', result=result)
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
