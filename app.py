@@ -17,8 +17,13 @@ with open('tokenizer.json', 'r') as f:
 def home():
     if request.method == 'POST':
         url = request.form['url']
-        return render_template('result.html', result=result)
+        return redirect(url_for('loading', url=url))
     return render_template('index.html')
+    
+@app.route('/loading')
+def loading():
+    url = request.args.get('url')
+    return redirect(url_for('predict', url=url))
 
 @app.route('/predict', methods=['POST'])
 def predict():
